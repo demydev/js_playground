@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #eef2f3;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator_wrap{
+    background-color: white;
+    padding: 0 20px 0px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+
+    margin: 50px auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input_wrap{
+    margin-bottom: 20px;
+}
+
+.clean_button{
+    background-color: #434343;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.clean_button:hover{
+    background-color: #565656;
+}
+
+#message_field{
+    font-family: 'Silkscreen',serif;
+    color: #fc4f4f;
+    margin-top: 20px 0px 10px 0px;
+}
+
+.input_fields{
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid #434343;
+    background-color: #ffffff;
+    outline: none;
+}
+
+#result{
+    color: #565656;
+    opacity: 1;
+}
+
+#number_one:focus::placeholder, #number_two:focus::placeholder {
+    color: transparent;
+}
+

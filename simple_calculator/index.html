@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>front_calculator</title>
+    <link rel="icon" href="img/calculator.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="calculator_wrap">
+            <p class="name_text">Calculator</p>
+            <div class="input_wrap">
+                <input placeholder="Enter first number" class ="input_fields" type="text" id="number_one">
+                <span>+</span>
+                <input placeholder="Enter second number" class ="input_fields" type="text" id="number_two">
+                <span>=</span>
+                <input placeholder="Result" class ="input_fields" type="text" id="result" readonly>
+            </div>
+            <button class = "clean_button" id="clean">Clean</button>
+            <span id="message_field"></span>
+        </div>
+    </div>
+    
+    <script src="script.js" defer></script>
+</body>
