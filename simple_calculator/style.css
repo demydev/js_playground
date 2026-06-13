@@ -39,12 +39,13 @@ body {
 }
 
 #message_field{
-    font-family: 'Silkscreen',serif;
+    font-family: 'Silkscreen', serif;
     color: #fc4f4f;
     margin-top: 20px;
 }
 
 .input_fields{
+    color: #434343;
     border-radius: 10px;
     padding: 5px;
     border: 1px solid #434343;
@@ -53,11 +54,13 @@ body {
 }
 
 #result{
-    color: #434343;
     opacity: 1;
 }
 
 #number_one:focus::placeholder, #number_two:focus::placeholder {
     color: transparent;
 }
+
+
+
 
