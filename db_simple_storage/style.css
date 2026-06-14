@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&family=Silkscreen:wght@400;700&display=swap');
+
+body{
+    font-family: "Silkscreen", sans-serif; 
+    background-color: #d7d7d7;
+
+    margin: 0;
+    padding: 0;
+}
+
+.section{
+    max-width: 1920px;
+}
+
+.container{
+   width: 100%; 
+}
+
+.nav_bar{
+    display: flex;
+    justify-content: center;
+    background-color: #2c6efc;
+}
+
+.logo_main_text{
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.hero_wrap{
+    max-width: 500px;
+    margin: 1rem auto 0 auto;
+    padding: 1rem;
+}
+
+.inputs_wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    gap: 0.7rem;
+}
+
+.hero_input_fields{
+    font-family: "Silkscreen", sans-serif; 
+    font-size: 0.8rem;
+    text-align: center;
+    outline: none;
+    color: #000000;
+
+    padding: 0.3rem;
+
+    border-radius: 0.5rem;
+    border-width: 0;
+}
+.hero_input_fields::placeholder{
+    color: #000000;
+    opacity: 0.8;
+}
+
+.hero_button{
+    font-family: "Silkscreen", sans-serif; 
+    font-size: 0.7rem;
+    text-align: center;
+    outline: none;
+    color: #ffffff;
+
+    padding: 0.3rem;
+    margin-top: 0.5rem;
+
+    width: 100%;
+
+    border-radius: 0.5rem;
+    border-width: 0;
+    background-color: #149700;
+    cursor: pointer;
+}
+.hero_button:hover{
+    background-color: #23c423;
+}
+
+/*---------------------------------------------------------*/
+
+.display_wrap {
+    max-width: 500px;
+    margin: 2rem auto 0 auto;
+    padding: 1rem;
+    background-color: #ffffff; /* White block background to contrast with the page */
+    border-radius: 0.5rem;
+}
+
+.display_title {
+    font-size: 0.9rem;
+    color: #2c6efc;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Styles for each individual row card injected by JavaScript */
+.user_record_card {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    color: #000000;
+}
+
+/* Styling for the new toggle layout button */
+.toggle_button {
+    font-family: "Silkscreen", sans-serif; 
+    font-size: 0.7rem;
+    text-align: center;
+    outline: none;
+    color: #ffffff;
+
+    padding: 0.4rem;
+    margin-top: 0.8rem; /* Separates it from your green submit button */
+
+    width: 100%;
+
+    border-radius: 0.5rem;
+    border-width: 0;
+    background-color: #2c6efc; /* Matches your header theme color */
+    cursor: pointer;
+}
+
+.toggle_button:hover {
+    background-color: #1a56d6;
+}
+
+/* FIX: This class forces the browser engine to hide the entire container section completely */
+.hidden {
+    display: none !important;
+}

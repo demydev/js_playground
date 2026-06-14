@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>front_simple_storage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/database.png">
+</head>
+<body>
+    <div class="section">
+        <div class="container">
+            <div class="hero_wrap">
+                <div class="inputs_wrap">
+                    <input class="hero_input_fields" type="text" id="input_first_name" placeholder="First Name">
+                    <input class="hero_input_fields" type="text" id="input_age" placeholder="Age">
+                </div>
+                <button class="hero_button" id="submit_btn">Submit</button>
+                
+                <button class="toggle_button" id="toggle_table_btn">Show Saved Table</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="database_section" class="section hidden">
+        <div class="container">
+            <div class="display_wrap">
+                <h2 class="display_title">Stored Database Records</h2>
+                <div id="records_container"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</body>
+</html>
