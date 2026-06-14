@@ -83,8 +83,8 @@ body{
 
 .display_wrap {
     max-width: 500px;
-    margin: 2rem auto 0 auto;
-    padding: 1rem;
+    margin: 0rem auto 0 auto;
+    padding: 0.5rem;
     background-color: #ffffff; /* White block background to contrast with the page */
     border-radius: 0.5rem;
 }
