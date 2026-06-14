@@ -99,7 +99,7 @@ body{
 /* Styles for each individual row card injected by JavaScript */
 .user_record_card {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #f0f0f0;
     padding: 0.5rem 1rem;
     margin-bottom: 0.5rem;

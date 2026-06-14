@@ -34,7 +34,6 @@ async function loadAndDisplayTable() {
             
             // Injects data from your SQLite table schema
             card.innerHTML = `
-                <span>ID: ${user.id}</span>
                 <span>NAME: ${user.first_name}</span>
                 <span>AGE: ${user.age}</span>
             `;
