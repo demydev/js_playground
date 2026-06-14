@@ -12,10 +12,11 @@ const recordsContainer = document.getElementById('records_container');
 // 2. CORE FUNCTIONS
 // ==========================================
 
-// Function to fetch all rows from SQLite and display them on screen
+// Function to fetch all rows from SQLite on Port 5000 and render them
 async function loadAndDisplayTable() {
     try {
-        const response = await fetch('http://127.0.0.1:3000/api/users');
+        // FIXED: Pointing directly to Port 5000 to bypass VS Code Live Preview hijack
+        const response = await fetch('http://127.0.0.1:5000/api/users');
         const usersTableData = await response.json();
         
         // Clear previous entries to avoid stacking duplicate lists
@@ -26,12 +27,12 @@ async function loadAndDisplayTable() {
             return;
         }
 
-        // Loop through each database row item and build cards
+        // Loop through each database row item and build display cards
         usersTableData.forEach(user => {
             const card = document.createElement('div');
             card.className = 'user_record_card'; 
             
-            // Injects columns from your SQLite schema dynamically
+            // Injects data from your SQLite table schema
             card.innerHTML = `
                 <span>ID: ${user.id}</span>
                 <span>NAME: ${user.first_name}</span>
@@ -49,7 +50,7 @@ async function loadAndDisplayTable() {
 // 3. INTERACTIVE EVENT LISTENERS
 // ==========================================
 
-// Handle Submitting New Data
+// Handle Submitting New Data Form Entries
 submitBtn.addEventListener('click', async () => {
     const nameValue = firstNameInput.value.trim();
     const ageValue = ageInput.value.trim();
@@ -65,7 +66,8 @@ submitBtn.addEventListener('click', async () => {
     };
 
     try {
-        const response = await fetch('http://127.0.0.1:3000/api/users', {
+        // FIXED: Pointing directly to Port 5000
+        const response = await fetch('http://127.0.0.1:5000/api/users', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(userData)
@@ -75,10 +77,11 @@ submitBtn.addEventListener('click', async () => {
             const data = await response.json();
             console.log('Successfully saved to DB! Record ID:', data.insertedId);
             
+            // Wipe the input boxes clean
             firstNameInput.value = '';
             ageInput.value = '';
 
-            // Auto-refresh the visible cards if the table is currently shown
+            // Auto-refresh the visible table instantly if it is open
             if (!databaseSection.classList.contains('hidden')) {
                 loadAndDisplayTable();
             }
@@ -90,12 +93,12 @@ submitBtn.addEventListener('click', async () => {
     }
 });
 
-// Handle Showing/Hiding the Table Layout
+// Handle Showing/Hiding the Table Layout Panel
 toggleTableBtn.addEventListener('click', () => {
     const isCurrentlyHidden = databaseSection.classList.contains('hidden');
     
     if (isCurrentlyHidden) {
-        // Run the function to fetch data right as it opens up
+        // Pull down the clean dataset right as it opens up
         loadAndDisplayTable();
         
         databaseSection.classList.remove('hidden');
