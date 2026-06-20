@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&family=Quicksand:wght@300..700&family=Silkscreen:wght@400;700&display=swap');
+
 body{
+    font-family: "Quicksand", sans-serif;
+
+    background-color: #000000;
+
     margin: 0;
     padding: 0;
 }
@@ -10,4 +16,55 @@ body{
 .container{
    width: 100%; 
 }
+
+.hero_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+/*======================================================*/
+
+.login_wrap{
+    padding: 1rem;
+    border-radius: 1rem;
+
+    background-color: #1E1E20;
+}
+
+.main_title{
+    color: white;
+    font-weight: 500;
+
+    margin-bottom: 0.5rem;
+}
+
+.input_wrap{    
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.input{ 
+    background-color: #18181A;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    color: #777777;
+
+    padding: 0.5rem ;
+    flex-grow: 1;
+}
+
+
+.log_left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
