@@ -109,7 +109,7 @@ body {
 
 /* RIGHT SIDE IMAGE BANNER */
 .log_right {
-    flex: 4.5;                
+    width: 45%;
     height: 500px;   
 }       
 
