@@ -1,0 +1,15 @@
+{
+  "books": [
+    {
+      "title": "Refactoring",
+      "author": "Martin Fowler",
+      "id": "ZbQSkrcQKIY"
+    },
+    {
+      "title": "Refactoring",
+      "author": "Martin Fowler",
+      "id": "orna8_WzQVs"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
