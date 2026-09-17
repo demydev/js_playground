@@ -9,7 +9,8 @@ async function getWeather(CITY) {
         return;
     }
     const data = await response.json();
-    console.log(JSON.stringify(data, null, 1))
+    //console.log(JSON.stringify(data, null, 1))
+    console.log(`Now in ${CITY} ${data.weather[0].main} and ${data.main.temp}°C`)
     
 }
 
